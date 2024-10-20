@@ -1,0 +1,189 @@
+/* Fullscreen semi-transparent overlay */
+.login-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Popup form container */
+.login-popup-container {
+    background: linear-gradient(145deg, #3d3dff, #ab47bc);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    width: 350px;
+    color: white;
+    position: relative;
+    animation: popUp 0.6s ease-in-out;
+    transform: scale(0.8);
+}
+
+/* Title section with close icon */
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-popup-title h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Close button (cross icon) */
+.login-popup-title img {
+    cursor: pointer;
+    width: 25px;
+    transition: transform 0.4s ease;
+}
+
+.login-popup-title img:hover {
+    transform: rotate(180deg);
+}
+
+/* Input fields styling */
+.login-popup-inputs input {
+    width: 100%;
+    padding: 14px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+}
+
+.login-popup-inputs input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.login-popup-inputs input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
+    transform: scale(1.05);
+}
+
+/* Stylish submit button */
+.button5 {
+    width: 100%;
+    padding: 14px;
+    background: #ff4081;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.button5:hover {
+    background-color: #ff79a1;
+    transform: scale(1.1);
+}
+
+/* Checkbox and terms */
+.login-popup-condition {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.login-popup-condition p {
+    margin-left: 10px;
+}
+
+/* Links to switch between login and sign-up */
+.login-popup p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.login-popup span {
+    color: #ffcc80;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.login-popup span:hover {
+    color: #ffd54f;
+}
+
+/* Keyframe animations for entry and hover effects */
+
+
+@keyframes popUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Media Queries for responsiveness */
+
+/* Large screens (desktops) */
+
+
+/* Medium screens (tablets, smaller desktops) */
+@media (min-width: 768px) {
+    .login-popup-container {
+        width: 380px;
+        padding: 40px;
+    }
+}
+
+/* Small screens (phones in landscape, smaller tablets) */
+@media (max-width: 767px) {
+    .login-popup-container {
+        width: 320px;
+        padding: 30px;
+    }
+
+    .login-popup-title h2 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+/* Extra small screens (phones in portrait) */
+@media (max-width: 480px) {
+    .login-popup-container {
+        width: 280px;
+        padding: 20px;
+    }
+
+    .login-popup-title h2 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .login-popup-inputs input {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

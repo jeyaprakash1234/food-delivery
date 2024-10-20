@@ -1,0 +1,111 @@
+/* Footer styles */
+.footer {
+    background-color: #2c3e50; /* Dark background */
+    color: white; /* Text color */
+    padding: 40px 20px; /* Padding around footer */
+    text-align: center; /* Center text */
+    position: relative; /* Position for inner elements */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.footer::after {
+    content: ""; /* Pseudo-element for visual effect */
+    position: absolute; /* Absolute positioning */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background: rgba(0, 0, 0, 0.1); /* Slight overlay */
+    z-index: 0; /* Behind content */
+}
+
+.footer-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out items evenly */
+    align-items: flex-start; /* Align items at the start */
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    max-width: 1200px; /* Maximum width for content */
+    margin: 0 auto; /* Center content */
+    position: relative; /* Position for z-index */
+    z-index: 1; /* Bring above overlay */
+}
+
+.footer-content img {
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.footer-content-left {
+    flex: 1; /* Allow this section to take space */
+    padding-right: 20px; /* Space to the right */
+}
+
+.footer-content-center, .footer-content-right {
+    flex: 1; /* Allow these sections to take space */
+}
+
+.footer-content-center h2, .footer-content-right h2 {
+    margin-bottom: 15px; /* Space below headings */
+    font-size: 20px; /* Increased font size for headings */
+    border-bottom: 2px solid #3498db; /* Underline effect */
+    display: inline-block; /* Keep it inline for border */
+    padding-bottom: 5px; /* Space below heading */
+}
+
+.footer-content ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.footer-content ul li {
+    margin: 10px 0; /* Space between list items */
+    transition: color 0.3s ease; /* Transition effect for color */
+}
+
+.footer-content ul li:hover {
+    color: #3498db; /* Change color on hover */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.footer-social-icons {
+    display: flex; /* Use flexbox for icons */
+    gap: 15px; /* Space between icons */
+    margin-top: 15px; /* Space above icons */
+}
+
+.footer-social-icons img {
+    width: 35px; /* Set icon width */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: transform 0.3s, filter 0.3s; /* Smooth hover effect */
+}
+
+.footer-social-icons img:hover {
+    transform: scale(1.2); /* Scale up icon on hover */
+    filter: brightness(1.2); /* Brighten icon on hover */
+}
+
+hr {
+    border: 0; /* Remove default border */
+    height: 1px; /* Set height for the line */
+    background: rgba(255, 255, 255, 0.3); /* Light border color */
+    margin: 20px 0; /* Space above and below line */
+}
+
+.footer-copyright {
+    font-size: 14px; /* Smaller font size */
+    margin-top: 20px; /* Space above copyright text */
+    opacity: 0.8; /* Slightly transparent */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+    
+    .footer-content-left, .footer-content-center, .footer-content-right {
+        margin-bottom: 20px; /* Space below sections */
+    }
+}

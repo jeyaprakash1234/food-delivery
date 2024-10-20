@@ -1,0 +1,66 @@
+.app-download {
+    background-color: #282c34; /* Dark background for contrast */
+    padding: 40px; /* Increased padding for spaciousness */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow for elevation */
+    text-align: center; /* Center text */
+    max-width: 700px; /* Wider width */
+    margin: 30px auto; /* Center horizontally with more margin */
+    color: #ffffff; /* White text for better contrast */
+    position: relative; /* For pseudo-elements */
+}
+
+.app-download::before {
+    content: ''; /* Add decorative element */
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px; /* Width of decorative element */
+    height: 100px; /* Height of decorative element */
+    background: rgba(255, 255, 255, 0.1); /* Light overlay effect */
+    border-radius: 50%; /* Circular shape */
+    z-index: 0; /* Behind the text */
+}
+
+.app-download p {
+    font-size: 1.8rem; /* Larger text for better visibility */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 30px; /* Space below the text */
+}
+
+.app-download-platforms {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items */
+    gap: 25px; /* Space between buttons */
+    z-index: 1; /* Bring to front */
+}
+
+.app-download-platforms img {
+    width: 160px; /* Set a consistent width for images */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    border: 2px solid #ffffff; /* White border around images */
+    border-radius: 10px; /* Rounded corners on images */
+    padding: 5px; /* Space between image and border */
+}
+
+.app-download-platforms img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+    filter: brightness(1.1); /* Brighten image on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .app-download {
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    .app-download p {
+        font-size: 1.4rem; /* Smaller font size for mobile */
+    }
+
+    .app-download-platforms img {
+        width: 130px; /* Smaller image size for mobile */
+    }
+}
